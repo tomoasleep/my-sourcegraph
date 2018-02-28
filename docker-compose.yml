@@ -1,0 +1,9 @@
+version: '3'
+services:
+  sourcegraph:
+    image: sourcegraph/server:2.5.0
+    ports:
+      - 7080:7080
+    volumes:
+      - $HOME/.sourcegraph/config:/etc/sourcegraph
+      - $HOME/.sourcegraph/data:/var/opt/sourcegraph
